@@ -1,0 +1,176 @@
+.searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative; 
+  }
+
+  @media (min-width: 350px) {
+    .searchContainer {
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+  }
+      
+  @media (min-width: 769px) {
+    .searchContainer {
+      margin-left: auto;
+      margin-right: auto;
+     
+    }
+  }
+      
+  @media (min-width: 1024px) {
+    .searchContainer {
+      margin-right: auto;
+      margin-right: auto;
+      
+      
+    }
+  }
+      
+  @media (min-width: 1280px) {
+    .searchContainer {
+      margin-left: auto;
+      margin-right: auto;
+     
+    }
+  }
+
+  
+  .searchFocused {
+    width: 250px;
+  }
+  
+  .searchOpen {
+    width: 250px;
+    transition: width 0.4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  }
+  
+  .searchContainer .search:focus:hover {
+    border-bottom: 2px solid rgb(251, 251, 251)
+  }
+  
+  .searchContainer .search:focus {
+    width: 220px;
+    z-index: 1;
+    border-bottom: 2px solid rgb(249, 248, 248);
+    cursor: text;
+  }
+
+  @media (min-width: 350px) {
+    .searchContainer .search:focus {
+      margin-left: auto;
+      margin-right: auto;
+      width: 150px;
+      
+    }
+  }
+      
+  @media (min-width: 769px) {
+    .searchContainer .search:focus {
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+     
+    }
+  }
+      
+  @media (min-width: 1024px) {
+    .searchContainer .search:focus {
+      margin-right: auto;
+      margin-right: auto;
+      width: 220px;
+      
+    }
+  }
+      
+  @media (min-width: 1280px) {
+    .searchContainer .search:focus {
+      margin-left: auto;
+      margin-right: auto;
+      width: 220px;
+     
+    }
+  }
+  
+  .searchContainer .search {
+    height: 30px;
+    font-size: 25px;
+    display: inline-block;
+    font-family: "Lato";
+    font-weight: 80;
+    border: none;
+    outline: none;
+    color: #fffafa;
+    background-color: transparent;
+    padding: 3px;
+    padding-left: 30px;
+    width: 10px;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    transition: width 0.4s cubic-bezier(0.000, 0.795, 0.000, 1.000); 
+    cursor: pointer;
+  }
+
+  @media (min-width: 350px) {
+    .searchContainer .search {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 30px;
+      
+    }
+  }
+      
+  @media (min-width: 769px) {
+    .searchContainer .search {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 30px;
+     
+    }
+  }
+      
+  @media (min-width: 1024px) {
+    .searchContainer .search {
+      margin-right: auto;
+      margin-right: auto;
+      padding-left: 30px;
+      
+    }
+  }
+      
+  @media (min-width: 1280px) {
+    .searchContainer .search {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 30px;
+     
+    }
+  }
+  
+  .searchContainer .search::placeholder {
+    color: #fefefe;
+  }
+  
+  .searchContainer .lupa {
+    height: 40px;
+    width: 30px;
+    display: inline-block;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  .searchContainer.open .lupa {
+    display: none;
+  }
+
+  

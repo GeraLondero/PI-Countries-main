@@ -1,0 +1,9 @@
+.global{
+    background-position: center center;
+    background-size: cover;
+    height: 1800px;
+}
+
+.h1{
+    color: white;
+}
