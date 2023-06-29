@@ -5,5 +5,10 @@
 }
 
 .h1{
+    position: relative; right: 300px; top: 120px;
     color: white;
+}
+
+.ingresar{
+    position: relative; right: 300px; top: 120px;
 }

@@ -3,7 +3,7 @@ import styles from './OrderAlfa.module.css';
 import { useSelector, useDispatch} from "react-redux";
 import { orderCountries } from "../../../actions/actions";
 
-function OrderAlfa(){
+function OrderAlfa({setCurrentPage}){
     const dispatch = useDispatch(); 
 
     function handleClick(e){
@@ -11,6 +11,7 @@ function OrderAlfa(){
         if (name === "order") {
          return dispatch(orderCountries(value))
         }
+        setCurrentPage(1);
       }
 
 

@@ -58,7 +58,7 @@ export default function SearchBar({setCurrentPage}) {
             
           </form>
         </div>
-
+        <br/>
       </div>
     );
   }

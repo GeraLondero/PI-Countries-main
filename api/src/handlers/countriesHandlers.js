@@ -23,6 +23,7 @@ const getHandlers = async (req, res) =>{
                      flags: pais.flags[1],
                      continents: pais.continents[0],
                      capital: pais.capital || "Sin Datos",
+                     subregion: pais.subregion,
                      area: pais.area,
                      population: pais.population,
                      maps: pais.maps?.googleMaps || null,
@@ -36,7 +37,7 @@ const getHandlers = async (req, res) =>{
                     },
                     include:{
                      model: Activity,
-                     attributes: ['names', 'temporada'],
+                     /* attributes: ['names', 'temporada'], */
                      through: {attributes: []}
                 }
             })

@@ -10,7 +10,7 @@ import FilterActi from '../../components/filter/FilterActi/FilterActi';
 import CantidadPobla from '../../components/filter/CantidaPobla/CantidadPobla';
 import Paginado from '../../components/Paginado/Paginado'; 
 import SearchBar from '../../components/SearchBar/SearchBar';
-
+import { reset } from "../../actions/actions";
 
 
 
@@ -45,7 +45,8 @@ export default function Home() {
 },[dispatch])
   
   return (
-    <div className={styles.h1}>
+    <div>
+      <Nabvar /* handleChange={handleChange} handleSubmit={handleSubmit} */ />
       <Paginado 
           countryPerPage={countriePerPage}
           allCountries={allCountries.length}
@@ -53,9 +54,8 @@ export default function Home() {
           currentPage={currentPage}/>
 
       <h1 className={styles.titulo}>Home</h1>
-      <Nabvar /* handleChange={handleChange} handleSubmit={handleSubmit} */ />
       <div>
-        <OrderAlfa />
+        <OrderAlfa setCurrentPage={setCurrentPage}/>
      </div>
      <br />
      <div>
@@ -73,11 +73,15 @@ export default function Home() {
      <div>
         <SearchBar setCurrentPage={setCurrentPage} />
           </div>
+     <div>
+        <button className={styles.reset} onClick={()=> dispatch(reset())}>Reset</button>
+     </div>
+    
       {/* <CardCountries  allCountries = {allCountries}/>
       
  */}
  <br/>
-      <div>
+      <div className={styles.cardContainer}>
           {
             currentCountrie?.map((el) => (
               <CardCountries
@@ -86,6 +90,7 @@ export default function Home() {
                 name={el.name}
                 continents={el.continents}
                 population={el.population}
+                subregion={el.subregion}
                 image={el.flags}
                 
               />

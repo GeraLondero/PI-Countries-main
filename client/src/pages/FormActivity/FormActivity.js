@@ -101,9 +101,9 @@ export default function FormActivity() {
       if (Object.keys(errors).length === 0 && Object.keys(formErrors).length === 0) {
         if (Object.values(form).every((value) => value !== "")) {
           swal({
-            title: "Do you want to create the activity? This step cannot be modified...",
-            text: "¡Successful! Now you can enjoy your activity",
-            icon: "warning",
+            title: "¿Quieres crear la actividad? Este paso no se puede modificar...",
+            text: "¡Éxito! Ya puedes disfrutar de tu actividad",
+            icon: "Advertencia",
             buttons: ["Cancel", "Create"],
             dangerMode: true,
             className: 'custom-modal'
@@ -123,17 +123,17 @@ export default function FormActivity() {
               });
               navigate("/home");
     
-              swal("Activity Created!", "You can now enjoy your activity", "success");
+              swal("¡Actividad creada!", "Ya puedes disfrutar de tu actividad", "éxito");
             } else {
-              swal("Proceed to make the changes");
+              swal("Proceder a realizar los cambios");
             }
           });
         } else {
-          swal("Please fill in all the required fields.", "", "error");
+          swal("Por favor complete todos los campos requeridos.", "", "error");
         }
       } else {
         setErrors(formErrors);
-        swal("Please fix the validation errors.", "", "error");
+        swal("Corrija los errores de validación.", "", "error");
       }
     }
 
@@ -169,12 +169,12 @@ export default function FormActivity() {
                     name="difficulty"
                     onChange={handleChange} 
                     >
-                        <option value="">Select Difficulty</option>
-                        <option value="1">Very Easy</option>
-                        <option value="2">Easy</option>
+                        <option value="">Seleciona la dificultad</option>
+                        <option value="1">Muy facil</option>
+                        <option value="2">Facil</option>
                         <option value="3">Normal</option>
-                        <option value="4">Difficult</option>
-                        <option value="5">Extreme</option>
+                        <option value="4">Dificil</option>
+                        <option value="5">Extremo</option>
                     </select>
                     {errors.difficulty && (
                         <p>{errors.difficulty}</p>
@@ -242,7 +242,7 @@ export default function FormActivity() {
 
                 <div >
                 <select onChange={(e)=> handleSelect(e)}>
-                <option value="">Select Countries</option>
+                <option value="">Seleciona el pais</option>
                     {countries.map((cou) => 
                     <option value={cou.name} key={cou.name} > {cou.name}</option>
                     )}
@@ -267,7 +267,7 @@ export default function FormActivity() {
             </div>
               <div >
               <button type="submit">
-                <span>Create New Activity</span>
+                <span>Crea nueva actividad</span>
               </button>
               </div>
               <div>

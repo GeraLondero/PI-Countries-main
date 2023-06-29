@@ -16,6 +16,7 @@ const initialState = {
     countries: [],
     copyCountries: [],
     detailId: [],
+    controllActivities:{}
     
 }
 
@@ -44,7 +45,7 @@ function rootReducer (state= initialState, action){
             case RESET:
                 return {
                  ...state,
-                 countries: [...state.countries],
+                 countries: [...state.copyCountries],
                 }
 
             case FILTER_POR_CONTINENTS:
@@ -107,7 +108,7 @@ function rootReducer (state= initialState, action){
               
                 const filteredActivities = state.copyCountries.map((act) => {
 
-                  const temporada = act.activities.map((el) => ({ seasons: el.season }));
+                  const season = act.activities.map((el) => ({ temporadas: el.temporada }));
 
                   return {
                     id: act.id,
@@ -116,7 +117,7 @@ function rootReducer (state= initialState, action){
                     continents: act.continents,
                     capital: act.capital,
                     population: act.population,
-                    activities: temporada,
+                    activities: season,
                   };
                 });
               
@@ -125,7 +126,7 @@ function rootReducer (state= initialState, action){
                   turisActivities = filteredActivities.filter((el) => el.activities.length > 0);
                 } else {
                   turisActivities = filteredActivities.filter((el) =>
-                    el.activities.some((s) => s.seasons && s.seasons.includes(payload))
+                    el.activities.some((s) => s.temporadas && s.temporadas.includes(payload))
                   );
                 }
                 return {

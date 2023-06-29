@@ -1,11 +1,10 @@
 import React, {useState} from "react";
 import styles from './FilterActi.module.css'; 
 import { useSelector, useDispatch} from "react-redux";
-import { filterPorActivity } from "../../../actions/actions";
+import { filterPorActivity } from "../../../actions/actions.js";
 
 function FilterActi({setCurrentPage}){
     const dispatch = useDispatch(); 
-
     const [selectSeason, setSelectSeason] = useState('');
 
   const handleChange = (e) => {
@@ -22,11 +21,11 @@ return(
         <select value={selectSeason}
         onChange={handleChange}>
 
-        <option value="All">All Activity</option>
-        <option value="Summer">Summer</option>
-        <option value="Spring">Spring</option>
-        <option value="Autumn">Autumn</option>
-        <option value="Winter">Winter</option>
+        <option value="All">Todas las Actividades</option>
+        <option value="Summer">Verano</option>
+        <option value="Spring">Primavera</option>
+        <option value="Autumn">Otoño</option>
+        <option value="Winter">Invierno</option>
       </select>
 
     </div>

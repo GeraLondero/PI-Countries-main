@@ -34,6 +34,10 @@ module.exports = (sequelize) => {
       type: DataTypes.DECIMAL,
       
     },
+    subregion: {
+      type: DataTypes.STRING,
+      
+    },
 
     population: {
       type: DataTypes.INTEGER,

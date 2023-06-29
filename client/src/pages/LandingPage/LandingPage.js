@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 function LandingPage() {
   return (
     <div>
-      <h1 className={styles.h1}> come on don't stop now</h1>
-      <Link to="/home">
+      <h1 className={styles.h1}> Come on don't stop now</h1>
+      <Link to="/home" className={styles.ingresar}>
             <button>
             <span></span>
             <span></span>

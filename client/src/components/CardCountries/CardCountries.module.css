@@ -1,4 +1,131 @@
-.list{
+.card {
+    min-height: 300px;
+    width: 200px;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    box-shadow: 0px 10px 15px -3px rgb(143, 143, 143), 0px 12px 16px -4px rgb(0, 0, 0);
+    margin: 15px;
+    text-align: center;
+    border-radius: 50% / 10%;
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card h1 {
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #f2f1f1;
+    font-size: 1rem;
+  }
+  
+  .card h3 {
+    /* background: linear-gradient(to right, #536976, #292e49);
+    color: #ffffff; */
+    background-color: grey;
+    padding: .5rem;
+    border-radius: 10px;
+    width: 7.7rem;
+    margin: 0;
+    font-size: .8rem;
+  }
+  
+  .cardInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    color: white;
+  }
+  
+  .card img {
+    width: 110px;
+    height: 110px;
+    margin-top: 20px;
+    border-radius: 30%;
+  }
+  
+  .cardBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    border-radius: 50% / 10%;
+    z-index: 0;
+  }
+  
+  .card .btn {
+    font-size: 16px;
+    padding: 8px 16px;
+    background: linear-gradient(to right, #485563, #29323c);
+    color: #ffffff;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+    &:hover{
+      background: linear-gradient(to right, #283048, #859398);
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+    }
+  }
+  
+  .card:hover .cardFront {
+    transform: rotateY(180deg);
+  }
+  
+  .card:hover .cardBack {
+    transform: rotateY(0deg);
+  }
+  
+  .card .cardFront,
+  .card .cardBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% / 10%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+  }
+  
+  .card .cardFront {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  
+  .card .cardBack {
+    z-index: 1;
+    transform: rotateY(-180deg);
+  }
+  
+  
+  
+
+
+/* .list{
     width: 185vw;
     margin: 0 auto;
     display: grid;
@@ -10,17 +137,17 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    border: 10px solid gray;
+    border: 10px solid red;
     border-radius: 350px;
     padding: 1px;
     cursor: pointer;
-    /* -moz-osx-font-smoothing: grayscale; */
+    
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: 0.25s ease-out;
 
-}
+} */
 
-.h1:hover{
+/* .h1:hover{
     transform: scale(1.05);
-}
+} */

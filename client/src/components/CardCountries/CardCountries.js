@@ -8,15 +8,15 @@ export default function Card(props) {
   const { name, image, continents, id, population } = props;
 
   return (
-    <div className={styles.div}> 
-      <div >
-        <div >
+    <div className={styles.card} key={id}> 
+      <div>
+        <div className={styles.cardImage}>
         <Link to={`/${id}`}>
           <img src={image} width="200" height="200" alt={name} />
           </Link>
         </div>
 
-        <div >
+        <div className={styles.cardInfo}>
           <h1 >{name}</h1>
           <h3>{continents}</h3>
           <h5>N° Población: {population.toLocaleString()}</h5>
@@ -24,9 +24,9 @@ export default function Card(props) {
       </div>
 
       <div >
-        <div >
+        <div className={styles.btnConteiner}>
           <Link to={`/${id}`}>
-            <button >More info</button> 
+            {/* <button >More info</button>  */}
           </Link>
         </div>
       </div>
