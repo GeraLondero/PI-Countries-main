@@ -44,7 +44,7 @@ function Detail() {
             </div>
           ))
         ) : (
-          <h3 className={styles.temporada}>¡El país no tiene actividades!</h3>
+          <h3 className={styles.temporada}>¡Este país no tiene actividades!</h3>
         )}
       </div>
     
