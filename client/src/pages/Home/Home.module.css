@@ -10,12 +10,6 @@
     
 }
 
-.titulo{
-    margin-top: 75px;
-    margin-bottom: 50px;
-    color: blue;
-    font-size: 68pt;
-} 
 
 .cardContainer {
     display: grid;
@@ -57,4 +51,62 @@
       margin-right: auto;
     }
   }
+
+  
+    .filterorder {
+      position: relative; right: 0px; top: 0px; 
+      margin-top: 20px;
+      margin-bottom: 0px;
+      
+    }
+
+    .filtercont {
+      position: relative; right: 0px; top: 0px; 
+      margin-top: 20px;
+      margin-bottom: 0px;
+      
+    }
+
+    .filterActi {
+      position: relative; right: 0px; top: 0px; 
+      margin-top: 20px;
+      margin-bottom: 0px;
+      
+    }
+
+    .filterPobl {
+      position: relative; right: 0px; top: 0px; 
+      margin-top: 20px;
+      margin-bottom: 0px;
+      
+    }
+
+    .buscador{
+      position: relative; right: 0px; top: 0px; 
+      margin-top: 20px;
+      margin-bottom: 0px;
+    }
+
+    .reset{
+      background-color: blue;
+      border: none;
+      color: white;
+      padding: 10px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 10px;
+      margin: 6px 4px;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      
+  }
+  .reset:hover {
+    background-color: red; /* Green */
+    color: white;
+  }
+  
+    
+    
   

@@ -272,7 +272,7 @@ export default function FormActivity() {
               </div>
               <div>
               <Link to="/home">
-            <button>
+            <button className={styles.volver}>
              Volver
             </button>
               </Link>

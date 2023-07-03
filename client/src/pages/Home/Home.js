@@ -48,29 +48,24 @@ export default function Home() {
     <div>
       <Nabvar /* handleChange={handleChange} handleSubmit={handleSubmit} */ />
       <Paginado 
-          countryPerPage={countriePerPage}
+          countriePerPage={countriePerPage}
           allCountries={allCountries.length}
           paginado={paginado}
           currentPage={currentPage}/>
-
-      <h1 className={styles.titulo}>Home</h1>
-      <div>
-        <OrderAlfa setCurrentPage={setCurrentPage}/>
+      <div className={styles.filterorder}>
+        <OrderAlfa setCurrentPage={setCurrentPage} />
      </div>
-     <br />
-     <div>
+     <div className={styles.filtercont}>
       <FilterCont setCurrentPage={setCurrentPage}/> 
      </div>
-     <br />
-     <div>
+     <div className={styles.filterActi}>
       <FilterActi setCurrentPage={setCurrentPage} />
      </div>
-     <br />
-     <div>
+     <div className={styles.filterPobl}>
       <CantidadPobla setCurrentPage={setCurrentPage}/>
      </div>
-
-     <div>
+      <br/>
+     <div className={styles.buscador}>
         <SearchBar setCurrentPage={setCurrentPage} />
           </div>
      <div>
@@ -96,6 +91,9 @@ export default function Home() {
               />
             ))
           }
+         
+          
+         
         </div>
       
     </div>

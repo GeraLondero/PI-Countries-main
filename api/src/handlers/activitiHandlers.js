@@ -1,7 +1,7 @@
 const { Country, Activity } = require('../db');
 
-const creadorGetActivities = async ({names, difficulty, duration, temporada, countries}) => {
-   console.log(names, difficulty, duration, temporada, countries);
+const creadorGetActivities = async ({names, difficulty, duration, temporada,costo, countries}) => {
+   console.log(names, difficulty, duration, temporada,costo, countries);
     try {
      // const { names, difficulty, duration, temporada, countries } = data;
         const activity = await Activity.findOne({
@@ -14,6 +14,7 @@ const creadorGetActivities = async ({names, difficulty, duration, temporada, cou
             difficulty,
             duration,
             temporada,
+            costo,
           });
         }
         let foundCountries = [];

@@ -11,4 +11,23 @@
 
 .ingresar{
     position: relative; right: 300px; top: 120px;
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 6px 4px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+
+.ingresar:hover {
+  background-color: red; /* Green */
+  color: white;
+
 }

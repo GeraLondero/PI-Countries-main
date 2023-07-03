@@ -1,3 +1,5 @@
 .orderName{
-    color: white;
+  float: right;
+  width: 300px;
+  padding: 10px;
 }
