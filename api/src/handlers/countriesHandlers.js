@@ -2,7 +2,7 @@ const axios = require("axios");
 const {Country, Activity} = require("../db"); 
 const { Op } = require('sequelize');
 require('dotenv').config();
-
+const {DB_URL} = process.env;
 // Estas funciones van a llamar a la funcion que obtiene los datos de la BDD
     // Llamar a la funcion que obtiene los datos de la API externa.
     // Unir los datos ( BDD y API externa), unificando el formato. 
@@ -15,7 +15,7 @@ const getHandlers = async (req, res) =>{
     try {
        
         if (!dBCountry) {
-            const countriesApiGet = await axios.get('https://restcountries.com/v3/all')
+            const countriesApiGet = await axios.get(DB_URL)
             const apiCountries =  countriesApiGet.data.map(pais => {
                 return {
                      id: pais.cca3,
