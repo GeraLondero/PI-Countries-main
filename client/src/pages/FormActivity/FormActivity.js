@@ -143,12 +143,12 @@ export default function FormActivity() {
 
         <div>
             <div className={styles.divform}>
-            <h3 >Create tourist activity</h3>
+            <h3 className={styles.titulo}>Crear actividad turística</h3>
             <form onSubmit={(e) => handleSubmit(e)} >
               
               <div >
                 <div >
-                    <label>Activity Name:</label>
+                    <label className={styles.caracteristicas}>-Nombre:</label>
                     <input 
                     placeholder="Name..."
                     type="text" 
@@ -162,7 +162,7 @@ export default function FormActivity() {
                 </div>
                   
                 <div>
-                    <label>Difficulty: </label>
+                    <label className={styles.caracteristicas}>  -Dificultad: </label>
                     <select 
                     type="number" 
                     value={form.difficulty}
@@ -182,7 +182,7 @@ export default function FormActivity() {
                 </div>
 
                 <div>
-                    <label>Duration: </label>
+                    <label className={styles.caracteristicas}>  -Duracion: </label>
                     <input 
                     placeholder="Duration..."
                     type="number" 
@@ -194,45 +194,47 @@ export default function FormActivity() {
                     {errors.duration && (
                     <p>{errors.duration}</p>
                     )}
-                    <span>Hs</span>
+                    {/* <span>Hs</span> */}
                 </div>
 
                 <div>
-                    <label>temporada:</label>
-                    <label>
+                    <label className={styles.caracteristicas}>-Temporada:</label>
+                    <br />
+                     {/* <label>
                     <input 
                         type="checkbox" 
                         name="All"
                         value="All"
-                        onChange={handleCheck}/>All
+                        onChange={handleCheck}/>Todas
                     </label>
-                    <label>
+                    <br />  */}
+                    <label className={styles.temporadas}>
                     <input 
                         type="checkbox" 
                         name="Summer"
                         value="Summer"
-                        onChange={handleCheck}/>Summer
+                        onChange={handleCheck}/>Verano
                     </label>
-                    <label>
+                    <label className={styles.temporadas}>
                     <input 
                         type="checkbox" 
                         name="Autumn"
                         value="Autumn"
-                        onChange={handleCheck}/>Autumn
+                        onChange={handleCheck}/>Otoño
                     </label>
-                    <label>
+                    <label className={styles.temporadas}>
                     <input 
                         type="checkbox" 
                         name="Winter"
                         value="Winter"
-                        onChange={handleCheck}/>Winter
+                        onChange={handleCheck}/>Invierno
                     </label>
-                    <label>
+                    <label className={styles.temporadas}>
                     <input 
                         type="checkbox" 
                         name="Spring"
                         value="Spring"
-                        onChange={handleCheck}/>Spring
+                        onChange={handleCheck}/>Primavera
                     </label>
                     {errors.temporada && errors.temporada.length > 1 && (
                       <p>{errors.temporada}</p>
@@ -266,7 +268,7 @@ export default function FormActivity() {
                 </div>
             </div>
               <div >
-              <button type="submit">
+              <button type="submit" className={styles.nuevaActividad}>
                 <span>Crea nueva actividad</span>
               </button>
               </div>
@@ -277,10 +279,9 @@ export default function FormActivity() {
             </button>
               </Link>
               </div>
-             
             </form>
-
             </div>
+            
 
         </div>
     )

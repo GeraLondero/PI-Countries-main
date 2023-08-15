@@ -17,13 +17,14 @@ export default function SearchBar({setCurrentPage}) {
     }
   
     const handleInputChange = (e) => {
-      const { value } = e.target;
-      
+      const { value } = e.target;  
         setName(value);
-      dispatch(getCountriesName(value));
-      setCurrentPage(1)
-      
-    };
+        dispatch(getCountriesName(value));
+        setCurrentPage(1) 
+        
+      }
+        
+    
   
     const handleClick = () => {
       setIsSearchOpen(false);
@@ -56,7 +57,7 @@ export default function SearchBar({setCurrentPage}) {
             <input
               ref={searchInputRef}
               type="search"
-              placeholder="Search..."
+              placeholder="buscar..."
               value={name}
               onChange={handleInputChange}
               onBlur={handleBlur}

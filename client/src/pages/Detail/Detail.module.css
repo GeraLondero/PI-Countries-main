@@ -14,6 +14,7 @@
     position: fixed; top: 0px; left: 800px;
     font-size: 58pt;
     color: blue;
+    font-style: italic;
 }
 
 .img{
@@ -51,33 +52,65 @@
     color: red;
 }
 
-.volver{
-    font-size: 20px;
-    position: fixed; top: 540px; left: 660px;
-}
-
 .tituloActividades{
     position: fixed; top: 140px; left: 880px;
     font-size: 28pt;
     color: red;
 }
-/* .actividad{
-    position: inherit; top: 890px; left: 880px; 
-    font-size: 20pt;
-    color: red;
+
+.volver{
+    position: fixed; top: 540px; left: 660px;
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 6px 4px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+
+.volver:hover {
+  background-color: red; /* Green */
+  color: white;
+
+}
+
+ .actividad{
+    position: fixed; top: 190px; left: 800px;
+    float: right;
+    width: 300px;
+    padding: 10px;
+    color: white;
+    font-size: 18pt;
 }
 .temporada{
-    position: inherit; top: 260px; left: 880px; 
-    font-size: 20pt;
-    color: red;
+    position: fixed; top: 250px; left: 800px;
+    float: right;
+    width: 300px;
+    padding: 10px;
+    font-size: 15pt;
+    color: white;
 }
 .duracion{
-     position: inherit; top: 300px; left: 880px; 
-    font-size: 20pt;
-    color: red;
+    position: fixed; top: 280px; left: 800px;
+    float: right;
+    width: 300px;
+    padding: 10px;
+    font-size: 15pt;
+    color: white;
 }
 .dificultad{
-     position: inherit; top: 340px; left: 880px; 
-    font-size: 20pt;
-    color: red;
-} */
+    position: fixed; top: 310px; left: 800px;
+    float: right;
+    width: 300px;
+    padding: 10px;
+    font-size: 15pt;
+    color: white;
+} 
+

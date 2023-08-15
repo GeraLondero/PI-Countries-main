@@ -5,7 +5,10 @@ import Detail from './pages/Detail/Detail.js';
 import FormActivity from './pages/FormActivity/FormActivity.js'; 
 import LandingPage from './pages/LandingPage/LandingPage.js';
 import About from './pages/Soyabout/About.js';
+import axios from "axios";
 
+
+axios.defaults.baseURL = process.env.REACT_APP_API;
  
 function App() {
   return (

@@ -29,7 +29,7 @@ function Detail() {
         {details.activities?.length > 0 ? (
           details.activities.map(act => (
             <div key={act.id}>
-              <h3 className={styles.actividad}>- {act.names}:</h3>
+              <h3 className={styles.actividad}> {act.names}</h3>
               <p>
               {act.temporada && act.temporada.length > 0 ? (
                 <span className={styles.temporada}>- Temporada: {act.temporada.map(temporada => temporada).join(", ")}</span>

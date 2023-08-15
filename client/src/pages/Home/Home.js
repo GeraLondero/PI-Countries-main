@@ -6,7 +6,7 @@ import CardCountries from '../../components/CardCountries/CardCountries.js';
 import Nabvar from '../../components/Nabvar/Nabvar.js'; 
 import OrderAlfa from '../../components/filter/OrderAlfa/OrderAlfa';
 import FilterCont from '../../components/filter/FilterCont/FilterCont';
-import FilterActi from '../../components/filter/FilterActi/FilterActi';
+import FilterActiv from '../../components/filter/FilterActi/FilterActi';
 import CantidadPobla from '../../components/filter/CantidaPobla/CantidadPobla';
 import Paginado from '../../components/Paginado/Paginado'; 
 import SearchBar from '../../components/SearchBar/SearchBar';
@@ -59,7 +59,7 @@ export default function Home() {
       <FilterCont setCurrentPage={setCurrentPage}/> 
      </div>
      <div className={styles.filterActi}>
-      <FilterActi setCurrentPage={setCurrentPage} />
+      <FilterActiv setCurrentPage={setCurrentPage} />
      </div>
      <div className={styles.filterPobl}>
       <CantidadPobla setCurrentPage={setCurrentPage}/>

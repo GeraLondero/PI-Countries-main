@@ -15,7 +15,7 @@ import {url,
     export function getCountries(){
         return async function(dispatch){
             try {
-                var json = await axios.get(`${url}/countries`);
+                var json = await axios.get("https://pi-countries-main-production-bd4c.up.railway.app/countries");
             return dispatch({
                 type: GET_COUNTRIES,
                 payload: json.data
@@ -30,19 +30,22 @@ import {url,
 
     export function getCountriesName(name){
         return async function(dispatch){
-            var json = await axios.get(`${url}/countries?name=${name}`);
+            
+                var json = await axios.get(` https://pi-countries-main-production-bd4c.up.railway.app/countries?name=${name}`);
             console.log(json)
             return dispatch({
                 type: GET_COUNTRIES_NAME,
                 payload: json.data
                 
             })
+            
+            
         }
     }
 
     export function getDetail(id){
         return async function(dispatch){
-            var json = await axios.get(`${url}/countries/${id}`);
+            var json = await axios.get(`https://pi-countries-main-production-bd4c.up.railway.app/countries/${id}`);
             return dispatch({
                 type: GET_DETAIL,
                 payload: json.data
@@ -93,7 +96,7 @@ import {url,
     export function getActivityCreate(){
         return async function (dispatch) {
             try {
-              const response = await axios.get(`${url}/activities`);
+              const response = await axios.get(`https://pi-countries-main-production-bd4c.up.railway.app/activities`);
               const activities = response.data;
         
               dispatch({ type: GET_ACTIVITY_CREATED, payload: activities });
@@ -106,7 +109,7 @@ import {url,
 
     export function postActivity(payload){
         return async function (dispatch) {
-            const apiData = await axios.post(`${url}/activities`, payload)
+            const apiData = await axios.post(`https://pi-countries-main-production-bd4c.up.railway.app/activities`, payload)
             
             dispatch({type: POST_ACTIVITY, payload: apiData})
         }
