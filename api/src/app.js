@@ -7,12 +7,7 @@ const { Sequelize } = require('sequelize');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-require('dotenv').config();
-const {
 
-  URL_CLIENT
-
-} = process.env;
 
 require('./db.js');
 
@@ -25,7 +20,7 @@ server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
 server.use(morgan('dev'));
 server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', URL_CLIENT); // update to match the domain you will make the request from
+  res.header('Access-Control-Allow-Origin', 'https://pi-countries-main-ghj258tf2-geralondero.vercel.app/'); // update to match the domain you will make the request from
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
