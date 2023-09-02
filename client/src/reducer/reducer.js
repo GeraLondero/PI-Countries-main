@@ -139,12 +139,12 @@ function rootReducer (state= initialState, action){
             activities: action.payload
 
         }      
-        case GET_ACTIVITY_CREATED:
+       /*  case GET_ACTIVITY_CREATED:
             return {
                 ...state,
                 activities: action.payload
 
-            }      
+            }       */
         
         
         case POST_ACTIVITY:

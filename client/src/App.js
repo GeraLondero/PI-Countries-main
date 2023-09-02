@@ -8,7 +8,7 @@ import About from './pages/Soyabout/About.js';
 import axios from "axios";
 
 
-axios.defaults.baseURL = 'https://pi-countries-main-production-bd4c.up.railway.app/';
+axios.defaults.baseURL = 'https://pi-countries-main-production-bd4c.up.railway.app';
  
 function App() {
   return (

@@ -1,5 +1,5 @@
 import axios from "axios"; 
-import {url,
+import {
     GET_COUNTRIES,
     GET_COUNTRIES_NAME,
     GET_DETAIL,
