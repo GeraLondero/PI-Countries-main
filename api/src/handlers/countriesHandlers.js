@@ -15,7 +15,7 @@ const getHandlers = async (req, res) =>{
     try {
        
         if (!dBCountry) {
-            const countriesApiGet = await axios.get(DB_URL)
+            const countriesApiGet = await axios.get("https://restcountries.com/v3.1/all")
             const apiCountries =  countriesApiGet.data.map(pais => {
                 return {
                      id: pais.cca3,
