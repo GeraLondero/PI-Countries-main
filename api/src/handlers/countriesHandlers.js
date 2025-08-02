@@ -16,18 +16,18 @@ const getHandlers = async (req, res) =>{
        
         if (!dBCountry) {
             const countriesApiGet = await axios.get(process.env.DB_URL);
-            const apiCountries =  countriesApiGet.data.map(pais => {
-                return {
-                     id: pais.cca3,
-                     name: pais.name.common,
-                     flags: pais.flags[1],
-                     continents: pais.continents[0],
-                     capital: pais.capital || "Sin Datos",
-                     subregion: pais.subregion,
-                     area: pais.area,
-                     population: pais.population,
-                     maps: pais.maps?.googleMaps || null,
-                }
+            const apiCountries = countriesApiGet.data.map(pais => {
+            return {
+            id: pais.cca3,
+            name: pais.name.common,
+            flags: pais.flags?.svg || pais.flags?.png || "Sin bandera",
+            continents: pais.continents ? pais.continents[0] : "Sin datos",
+            capital: Array.isArray(pais.capital) && pais.capital.length > 0 ? pais.capital[0] : "Sin datos",
+            subregion: pais.subregion || null,
+            area: typeof pais.area === "number" ? pais.area : null,
+            population: typeof pais.population === "number" ? pais.population : null,
+            maps: pais.maps?.googleMaps || null,
+              }
             })
             await Country.bulkCreate(apiCountries); 
         } else if (name) {
