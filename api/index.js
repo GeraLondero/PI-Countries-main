@@ -20,10 +20,12 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 require('dotenv').config();
-const {PORT} = process.env; 
+
+const PORT = process.env.PORT || 3001; // ✅ valor por defecto si no existe PORT
+
 // Syncing all the models at once.
 conn.sync({ alter: true }).then(() => {
   server.listen(PORT, () => {
     console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
   });
-});  `GET /countries`
+});

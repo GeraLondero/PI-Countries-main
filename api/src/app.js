@@ -18,6 +18,7 @@ server.use(morgan('dev'));
 
 // ✅ CORS personalizado para dominios específicos de Vercel
 const allowedOrigins = [
+  'http://localhost:3000',
   'https://pi-countries-main-beryl.vercel.app',
   'https://pi-countries-main-git-main-geralondero.vercel.app'
 ];
