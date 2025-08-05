@@ -8,7 +8,12 @@ import About from './pages/Soyabout/About.js';
 import axios from "axios";
 
 
-axios.defaults.baseURL = 'https://pi-countries-main-production-bd4c.up.railway.app';
+axios.defaults.baseURL = 
+  process.env.NODE_ENV === 'development' 
+    ? 'http://localhost:3001' 
+    : 'https://pi-countries-backend-iadw.onrender.com';
+
+
  
 function App() {
   return (
